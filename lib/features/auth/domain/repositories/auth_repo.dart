@@ -2,18 +2,18 @@ import 'package:insta_clone/features/auth/domain/entities/app_user.dart';
 
 abstract class AuthRepo {
   // LOGIN
-  Future<AppUser?> login(
+  Future<AppUser?> signIn(
     String email,
     password,
   );
   //REGISTER
-  Future<AppUser?> register(
+  Future<AppUser?> createUser(
     String name,
     email,
     password,
   );
   // LOGOUT
-  Future<void> logout();
+  Future<void> signOut();
   // CURRENT USER
   Future<AppUser?> getCurrentUser();
 }
